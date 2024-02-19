@@ -14,62 +14,81 @@ img {
 }
 
 a {
-  text-decoration: none;
-  color: currentColor;
+    text-decoration: none;
+    color: currentColor;
 }
 
 /* COMPONENTS */
 body {
-  background: linear-gradient(
-    to bottom,
-    #4d9288 0px,
-    #4d9288 200px,
-    #dbdbd4 200px,
-    #dbdbd4 100%
-  );
+    background: linear-gradient( to bottom, #4d9288 0px, #4d9288 200px, #dbdbd4 200px, #dbdbd4 100% );
 }
 
 /* LAYOUT */
 
 #app {
-  height: 100vh;
+    height: 100vh;
 }
 
 .container {
-  display: flex;
-  height: 100%;
-  padding-top: 40px
+    display: flex;
+    height: 100%;
 }
 
+/* parte chat */
 .chat {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .nome-chat, .scrivi-testo {
-  background-color: blue;
-  height: 70px;
-  width: 100%;
+    background-color: blue;
+    height: 60px;
+    width: 100%;
 }
 
+/* parte sidebar */
 .messaggi {
-  background-color: aqua;
-  height: calc(100% - 140px);
-  width: 100%;
+    background-color: aqua;
+    height: calc(100% - 120px);
+    width: 100%;
 }
 
 .side-bar-contatti {
-  background-color: yellow;
-  display: none;
+    background-color: yellow;
+    display: none;
 }
 
+/* elementi sidebar */
+.mio-contatto {
+    border: 1px solid black;
+    height: 60px;
+}
+
+.notifiche-bloccate {
+    border: 1px solid black;
+    height: 70px;
+}
+
+.cerca-chat {
+    border: 1px solid black;
+    height: 30px;
+}
+
+.contatto-chat {
+    border: 1px solid black;
+    height: 70px;
+}
+
+
 /* UTILITIES */
+
 
 /* MEDIAQUERYS */
 @media (min-width: 576px) {
   .side-bar-contatti {
     display: flex;
+    flex-direction: column;
     width: 80px;
   }
 }
@@ -78,6 +97,10 @@ body {
   #app {
     margin: 0 auto;
     width: 85%;
+  }
+
+  #app .container {
+    padding-top: 40px
   }
 
   .container .side-bar-contatti {
