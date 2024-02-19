@@ -19,12 +19,51 @@ a {
 }
 
 /* COMPONENTS */
-
+body {
+    background: linear-gradient(to bottom, #4D9288 0px, #4D9288 200px, #DBDBD4 200px, #DBDBD4 100%);
+}
 
 /* LAYOUT */
+.container {
+    height: 100vh;
+    display: flex;
+    /* margin: 0 auto; */
+    /* max-width: 85%; */
+    /* margin-top: 40px; */
+}
+
+.chat {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.nome-chat, .scrivi-testo { background-color: blue;
+    height: 70px;
+    width: 100%;
+}
+
+.messaggi {
+    background-color: aqua;
+    height: calc(100% - 140px);
+    width: 100%;
+}
+
+.side-bar-contatti {
+    background-color: yellow;
+    display: none;
+}
 
 
 /* UTILITIES */
+
+
+/* MEDIAQUERYS */
+@media (min-width: 576px) {
+    .side-bar-contatti {
+        display: flex;
+    }
+}
 
 
 /* DEBUG */
