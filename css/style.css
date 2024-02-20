@@ -108,6 +108,20 @@ body {
   height: 30px;
   margin: 5px;
   background-color: white;
+  display: none;
+}
+
+/* chat amici */
+.text-chat {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  display: none;
+}
+
+.text-chat div {
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 
@@ -146,6 +160,18 @@ input:search {
   border: none;
 }
 
+.ultimo-accesso {
+  font-size: 13px;
+}
+
+.nominativo {
+  font-size: 18px;
+}
+
+.orario {
+  font-size: 15px;
+}
+
 
 /* MEDIAQUERYS */
 @media (min-width: 576px) {
@@ -177,6 +203,14 @@ input:search {
   }
 
   .notifiche-bloccate {
+    display: flex;
+  }
+
+  .cerca-chat {
+    display: block;
+  }
+
+  .text-chat {
     display: flex;
   }
 }
