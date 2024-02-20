@@ -47,6 +47,12 @@ body {
     width: 100%;
 }
 
+/* chat aperta */
+.info-chat {
+  padding-top: 10px;
+  padding-left: 8px;
+}
+
 /* parte sidebar */
 .messaggi {
     background-color: aqua;
@@ -172,6 +178,16 @@ input:search {
   font-size: 15px;
 }
 
+.nome-chat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-aperta {
+  display: flex;
+}
+
 
 /* MEDIAQUERYS */
 @media (min-width: 576px) {
@@ -179,6 +195,12 @@ input:search {
     display: flex;
     flex-direction: column;
     width: 80px;
+  }
+}
+
+@media (min-width: 756px) {
+  .nome-chat .buttons {
+    display: block;
   }
 }
 
