@@ -45,6 +45,11 @@ body {
     background-color: #F2EEEB;
     height: 60px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* chat aperta */
@@ -52,6 +57,11 @@ body {
   background: url(../img/mine.jpg);
   height: calc(100% - 120px);
   width: 100%;
+  display: block;
+  overflow: auto;
+}
+
+.container-msg {
   display: flex;
   flex-direction: column;
   padding: 7%;
@@ -100,7 +110,6 @@ body {
 
 /* elementi sidebar */
 .contatto {
-    border: 1px solid black;
     height: 60px;
     display: flex;
     align-items: end;
@@ -108,7 +117,6 @@ body {
 }
 
 .notifiche-bloccate {
-    border: 1px solid black;
     height: 70px;
     background-color: #A6D7F9;
     display: flex;
@@ -143,14 +151,33 @@ body {
 
 /* search */
 .cerca-chat {
-  border: 1px solid black;
   height: 30px;
   margin: 5px;
   background-color: white;
+  display: flex;
+  align-items: center;
   display: none;
 }
 
+.cerca-chat a {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.cerca-chat input {
+  border: none;
+  padding: 4px;
+  flex-basis: 0%;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
 /* chat amici */
+ul {
+  display: block;
+  overflow: auto;
+}
+
 .text-chat {
   display: flex;
   flex-grow: 1;
@@ -179,6 +206,7 @@ body {
 .mio {
   justify-content: space-between;
   background-color: #F2EEEB;
+  border-right: 2px solid lightgrey;
 }
 
 .buttons {
@@ -191,8 +219,8 @@ body {
   font-size: 18px;
 }
 
-input:search {
-  border: none;
+.amico {
+  border-bottom: 2px solid lightgray;
 }
 
 .ultimo-accesso {
@@ -219,6 +247,22 @@ input:search {
 
 .scrivi-testo i {
   cursor: pointer;
+  display: none;
+}
+
+.scrivi-testo div {
+  flex-basis: 0%;
+  flex-grow: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.scrivi-testo input {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  outline: none;
 }
 
 
@@ -233,6 +277,10 @@ input:search {
 
 @media (min-width: 756px) {
   .nome-chat .buttons {
+    display: block;
+  }
+
+  .scrivi-testo i {
     display: block;
   }
 }
@@ -262,7 +310,7 @@ input:search {
   }
 
   .cerca-chat {
-    display: block;
+    display: flex;
   }
 
   .text-chat {
